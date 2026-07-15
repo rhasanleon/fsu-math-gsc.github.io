@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    (() => {
+      try {
+        const preference = localStorage.getItem("gsc-theme") || "system";
+        const systemIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const resolved = preference === "system"
+          ? (systemIsDark ? "dark" : "light")
+          : preference;
+
+        document.documentElement.dataset.theme = resolved;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.style.colorScheme = resolved;
+      } catch {
+        document.documentElement.dataset.theme = "light";
+        document.documentElement.dataset.themePreference = "system";
+      }
+    })();
+  </script>
+
+  <meta name="description" content="Initiatives and events of the FSU Mathematics Graduate Student Council.">
+  <meta name="theme-color" content="#782f40">
+  <title>Events | FSU Mathematics GSC</title>
+  <link rel="icon" href="assets/gsc-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header inner-page-header">
+    <div class="top-rule" aria-hidden="true"></div>
+    <div class="shell header-layout">
+      <a class="identity" href="index.html" aria-label="FSU Mathematics Graduate Student Council home">
+        <img src="assets/gsc-logo.png" alt="FSU Graduate Student Council mathematics logo" class="identity-logo">
+      </a>
+
+      <div class="header-content">
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            <span class="nav-toggle-label">Menu</span>
+            <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span></span>
+          </button>
+
+          <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a class="active" href="events.html">Events</a>
+            <a href="constitution.html">Constitution</a>
+            <a href="resources.html">Resources</a>
+            <a href="faq.html">FAQ</a>
+
+            <div class="theme-control">
+              <span class="theme-indicator" aria-hidden="true"></span>
+              <label class="sr-only" for="theme-select">Website appearance</label>
+              <select id="theme-select" aria-label="Website appearance">
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="events-page-hero">
+      <div class="shell events-page-hero-grid">
+        <div>
+          <p class="section-kicker">Initiatives &amp; events</p>
+          <h1>Programs that make graduate life more connected.</h1>
+        </div>
+
+        <div class="events-page-intro">
+          <p>
+            From informal coffee conversations to research presentations and
+            undergraduate mentoring, GSC initiatives create places to meet,
+            exchange ideas, and participate in the life of the department.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-quick-nav" aria-label="Events on this page">
+      <div class="shell events-quick-nav-inner">
+        <span>Explore</span>
+        <nav>
+          <a href="#coffee">Coffee &amp; Tea</a>
+          <a href="#picnic">Spring Picnic</a>
+          <a href="#bee">Integration Bee</a>
+          <a href="#forum">Open Forum</a>
+          <a href="#reading">Reading Program</a>
+          <a href="#research">Research Week</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="events-programs">
+      <div class="shell events-program-list">
+
+        <article class="event-program" id="coffee">
+          <div class="event-program-image event-program-image-illustrated">
+            <img src="assets/events/coffee-hour.png" alt="Illustrated graduate mathematics student coffee and tea gathering">
+            <span class="event-program-number">01</span>
+          </div>
+          <div class="event-program-copy">
+            <p class="event-program-label">Community · Recurring</p>
+            <h2>GSC Coffee/Tea Hour</h2>
+            <div class="event-program-meta">
+              <span>Wednesdays · 2:30 PM</span>
+              <span>LOV 204 Lounge</span>
+            </div>
+            <p>Come and relax in the student lounge with a cup of tea or coffee and meet other graduate students.</p>
+          </div>
+        </article>
+
+        <article class="event-program event-program-reverse" id="picnic">
+          <div class="event-program-image">
+            <img src="assets/events/spring-picnic.png" alt="Graduate students socializing at an outdoor spring picnic">
+            <span class="event-program-number">02</span>
+          </div>
+          <div class="event-program-copy">
+            <p class="event-program-label">Community · Spring</p>
+            <h2>Graduate Spring Picnic</h2>
+            <div class="event-program-meta">
+              <span>End of Spring Semester</span>
+              <span>Tallahassee</span>
+            </div>
+            <p>Enjoy a picnic lunch and the amenities of the FSU Reservation with the graduate mathematics community.</p>
+          </div>
+        </article>
+
+        <article class="event-program" id="bee">
+          <div class="event-program-image event-program-image-illustrated">
+            <img src="assets/events/integration-bee.png" alt="Illustrated integration competition with mathematical and honeycomb motifs">
+            <span class="event-program-number">03</span>
+          </div>
+          <div class="event-program-copy">
+            <p class="event-program-label">Competition · Mathematics</p>
+            <h2>Integration Bee</h2>
+            <div class="event-program-meta">
+              <span>Date &amp; time TBD</span>
+              <span>LOV 103</span>
+            </div>
+            <p>Undergraduate students are invited to test their integration skills for a chance to win cash prizes.</p>
+          </div>
+        </article>
+
+        <article class="event-program event-program-reverse" id="forum">
+          <div class="event-program-image">
+            <img src="assets/events/open-forum.png" alt="Graduate students participating in a small open forum discussion">
+            <span class="event-program-number">04</span>
+          </div>
+          <div class="event-program-copy">
+            <p class="event-program-label">Representation · Student voice</p>
+            <h2>GSC Office Hours: Open Forum</h2>
+            <div class="event-program-meta">
+              <span>Date/time varies</span>
+              <span>Location determined each semester</span>
+            </div>
+            <p>Questions? Concerns? Suggestions? Come chat with us. The open forum creates a direct and informal route to the council.</p>
+          </div>
+        </article>
+
+        <article class="event-program" id="reading">
+          <div class="event-program-image">
+            <img src="assets/events/directed-reading.png" alt="Graduate student mentoring students during a mathematics reading session">
+            <span class="event-program-number">05</span>
+          </div>
+          <div class="event-program-copy">
+            <p class="event-program-label">Mentorship · Academic initiative</p>
+            <h2>Directed Reading Program</h2>
+            <div class="event-program-meta">
+              <span>TBD</span>
+              <span>TBD</span>
+            </div>
+            <p>The Directed Reading Program pairs graduate mathematics students with undergraduates interested in deeper mathematical study and research-style exploration.</p>
+            <p>It gives undergraduates a focused route into advanced topics while giving graduate students an opportunity to develop mentorship and mathematical communication experience.</p>
+          </div>
+        </article>
+
+        <article class="event-program event-program-reverse" id="research">
+          <div class="event-program-image">
+            <img src="assets/events/research-week.png" alt="Graduate students discussing mathematics research posters">
+            <span class="event-program-number">06</span>
+          </div>
+          <div class="event-program-copy">
+            <p class="event-program-label">Research · Graduate scholarship</p>
+            <h2>Spring Graduate Research Week</h2>
+            <div class="event-program-meta">
+              <span>Time TBD</span>
+              <span>Location TBD</span>
+            </div>
+            <p>An opportunity for graduate students to present and share their research with the mathematics community.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="events-closing-modern">
+      <div class="shell events-closing-modern-grid">
+        <div>
+          <p class="section-kicker light">Student-led programming</p>
+          <h2>Have an idea for the next GSC initiative?</h2>
+        </div>
+        <div>
+          <p>Bring a proposal, suggest a format, or share a need that the council should consider.</p>
+          <a class="button button-light" href="about.html">Meet the council</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="assets/gsc-logo.png" alt="" aria-hidden="true">
+        <div>
+          <strong>Graduate Student Council</strong>
+          <span>FSU Mathematics</span>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <p>Navigate</p>
+        <a href="about.html">About us</a>
+        <a href="events.html">Events</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="resources.html">Resources</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+
+      <div class="footer-contact">
+        <p>Department</p>
+        <span>Florida State University</span>
+        <span>Department of Mathematics</span>
+        <span>208 Love Building</span>
+        <span>Tallahassee, FL 32306</span>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <span>© <span id="year"></span> FSU Mathematics Graduate Student Council</span>
+      <span>Student-led · Academic · Community</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

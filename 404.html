@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    (() => {
+      try {
+        const preference = localStorage.getItem("gsc-theme") || "system";
+        const systemIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const resolved = preference === "system" ? (systemIsDark ? "dark" : "light") : preference;
+        document.documentElement.dataset.theme = resolved;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.style.colorScheme = resolved;
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
+  <meta name="theme-color" content="#782f40">
+  <title>Page not found | FSU Mathematics GSC</title>
+  <link rel="icon" href="assets/gsc-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="placeholder-main">
+    <div class="shell">
+      <p class="section-kicker">404</p>
+      <h1>Page not found.</h1>
+      <p>The page you are looking for does not exist or has moved.</p>
+      <a class="button button-primary" href="index.html">Return home</a>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

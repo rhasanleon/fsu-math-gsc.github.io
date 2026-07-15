@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    (() => {
+      try {
+        const preference = localStorage.getItem("gsc-theme") || "system";
+        const systemIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const resolved = preference === "system"
+          ? (systemIsDark ? "dark" : "light")
+          : preference;
+
+        document.documentElement.dataset.theme = resolved;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.style.colorScheme = resolved;
+      } catch {
+        document.documentElement.dataset.theme = "light";
+        document.documentElement.dataset.themePreference = "system";
+      }
+    })();
+  </script>
+
+  <meta name="theme-color" content="#782f40">
+  <title>Resources | FSU Mathematics GSC</title>
+  <link rel="icon" href="assets/gsc-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="top-rule" aria-hidden="true"></div>
+
+    <div class="shell header-layout">
+      <a class="identity" href="index.html">
+        <img
+          src="assets/gsc-logo.png"
+          alt="FSU Graduate Student Council mathematics logo"
+          class="identity-logo"
+        >
+      </a>
+
+      <div class="header-content">
+        <nav class="main-nav" aria-label="Main navigation">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span class="nav-toggle-label">Menu</span>
+            <span class="nav-toggle-lines" aria-hidden="true">
+              <span></span><span></span>
+            </span>
+          </button>
+
+          <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="events.html">Events</a>
+            <a href="constitution.html">Constitution</a>
+            <a class="active" href="resources.html">Resources</a>
+            <a href="faq.html">FAQ</a>
+            <div class="theme-control">
+              <span class="theme-indicator" aria-hidden="true"></span>
+              <label class="sr-only" for="theme-select">Website appearance</label>
+              <select id="theme-select" aria-label="Website appearance">
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="placeholder-main" id="main-content">
+    <div class="shell">
+      <p class="section-kicker">Graduate student hub</p>
+      <h1>Resources</h1>
+      <p>This page will organize verified academic, GTA, funding, travel, research, career, and student-support resources for mathematics graduate students.</p>
+
+      <div class="placeholder-panel">
+        <strong>Content template.</strong>
+        This page is intentionally ready for us to build together next.
+        The navigation and visual identity are already connected.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-bottom">
+      <span>© <span id="year"></span> FSU Mathematics Graduate Student Council</span>
+      <a href="index.html">Return home →</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

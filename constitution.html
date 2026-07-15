@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    (() => {
+      try {
+        const preference = localStorage.getItem("gsc-theme") || "system";
+        const systemIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const resolved = preference === "system"
+          ? (systemIsDark ? "dark" : "light")
+          : preference;
+
+        document.documentElement.dataset.theme = resolved;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.style.colorScheme = resolved;
+      } catch {
+        document.documentElement.dataset.theme = "light";
+        document.documentElement.dataset.themePreference = "system";
+      }
+    })();
+  </script>
+
+<meta
+    name="description"
+    content="Constitution and governance information for the FSU Mathematics Graduate Student Council."
+  >
+  <meta name="theme-color" content="#782f40">
+
+  <title>Constitution | FSU Mathematics GSC</title>
+
+  <link rel="icon" href="assets/gsc-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header inner-page-header">
+    <div class="top-rule" aria-hidden="true"></div>
+
+    <div class="shell header-layout">
+      <a
+        class="identity"
+        href="index.html"
+        aria-label="FSU Mathematics Graduate Student Council home"
+      >
+        <img
+          src="assets/gsc-logo.png"
+          alt="FSU Graduate Student Council mathematics logo"
+          class="identity-logo"
+        >
+      </a>
+
+      <div class="header-content">
+        <nav class="main-nav" aria-label="Main navigation">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span class="nav-toggle-label">Menu</span>
+
+            <span class="nav-toggle-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+
+          <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="events.html">Events</a>
+            <a class="active" href="constitution.html">Constitution</a>
+            <a href="resources.html">Resources</a>
+            <a href="faq.html">FAQ</a>
+
+            <div class="theme-control">
+              <span class="theme-indicator" aria-hidden="true"></span>
+
+              <label class="sr-only" for="theme-select">
+                Website appearance
+              </label>
+
+              <select id="theme-select" aria-label="Website appearance">
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =====================================================
+         CONSTITUTION HERO
+         ===================================================== -->
+    <section class="constitution-hero">
+      <div class="shell constitution-hero-grid">
+        <div>
+          <p class="section-kicker">Council governance</p>
+
+          <h1>Constitution</h1>
+
+          <p class="constitution-deck">
+            The operating principles, membership expectations, and elected
+            leadership structure of the FSU Mathematics Graduate Student Council.
+          </p>
+        </div>
+
+        <aside class="constitution-status" aria-label="Document status">
+          <span class="status-dot" aria-hidden="true"></span>
+
+          <div>
+            <p>Living document</p>
+
+            <strong>
+              This constitution is updated regularly.
+            </strong>
+
+            <span>Last updated August 2024</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         LOCAL CONSTITUTION NAVIGATION
+         ===================================================== -->
+    <section class="constitution-nav-section" aria-label="Constitution sections">
+      <div class="shell">
+        <nav class="constitution-nav">
+          <a href="#activities">
+            <span>01</span>
+            Activities
+          </a>
+
+          <a href="#joining">
+            <span>02</span>
+            Joining
+          </a>
+
+          <a href="#maintaining">
+            <span>03</span>
+            Membership
+          </a>
+
+          <a href="#positions">
+            <span>04</span>
+            Elected positions
+          </a>
+
+          <a href="#voting">
+            <span>05</span>
+            Voting
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ARTICLE I
+         ===================================================== -->
+    <section class="constitution-article" id="activities">
+      <div class="shell constitution-article-grid">
+        <header class="article-label">
+          <span>Article 01</span>
+          <p>Purpose &amp; activity</p>
+        </header>
+
+        <div class="article-content">
+          <h2>Activities of the Council</h2>
+
+          <p class="article-intro">
+            The council meets, gathers graduate student perspectives, supports
+            incoming students, and assists with major departmental activities.
+          </p>
+
+          <ol class="constitution-list constitution-list-numbered">
+            <li>
+              <span class="list-index">01</span>
+
+              <p>
+                Meet every two weeks, or more frequently when necessary, to
+                discuss graduate student concerns and concerns or requests
+                communicated by the administration.
+              </p>
+            </li>
+
+            <li>
+              <span class="list-index">02</span>
+
+              <p>
+                Survey the broader mathematics graduate student population to
+                identify comments or concerns that should be addressed by the
+                administration.
+              </p>
+            </li>
+
+            <li>
+              <span class="list-index">03</span>
+
+              <p>
+                Help incoming graduate students with transportation and
+                accommodations.
+              </p>
+            </li>
+
+            <li>
+              <span class="list-index">04</span>
+
+              <p>
+                Meet with prospective graduate students to discuss FSU
+                Mathematics graduate programs and graduate student life at FSU
+                more generally.
+              </p>
+            </li>
+
+            <li>
+              <span class="list-index">05</span>
+
+              <p>
+                Assist with Graduate Student Research Week and the Graduate
+                Student Picnic each Spring, as well as Orientation Week in the
+                Fall, either by volunteering directly or by encouraging broader
+                graduate student participation.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ARTICLE II
+         ===================================================== -->
+    <section class="constitution-article constitution-article-alt" id="joining">
+      <div class="shell constitution-article-grid">
+        <header class="article-label">
+          <span>Article 02</span>
+          <p>Eligibility</p>
+        </header>
+
+        <div class="article-content">
+          <h2>Joining the Council</h2>
+
+          <p class="article-intro">
+            New members are added as graduating or departing members leave the
+            council. Membership should seek balanced representation across
+            departmental areas and should also strive for diversity in gender
+            expression, nationality, race, and other backgrounds.
+          </p>
+
+          <div class="eligibility-panel">
+            <p class="panel-kicker">
+              Membership is open to any Mathematics graduate student who has:
+            </p>
+
+            <div class="eligibility-grid">
+              <article>
+                <span>01</span>
+                <h3>Nomination</h3>
+                <p>
+                  Received a nomination from a current GSC member during the
+                  second-to-last meeting of the semester.
+                </p>
+              </article>
+
+              <article>
+                <span>02</span>
+                <h3>Qualifying exams</h3>
+                <p>
+                  Passed all Qualifying exams required for their departmental
+                  area.
+                </p>
+              </article>
+
+              <article>
+                <span>03</span>
+                <h3>Council approval</h3>
+                <p>
+                  Received a unanimous approval vote from the current members
+                  of the council.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ARTICLE III
+         ===================================================== -->
+    <section class="constitution-article" id="maintaining">
+      <div class="shell constitution-article-grid">
+        <header class="article-label">
+          <span>Article 03</span>
+          <p>Active service</p>
+        </header>
+
+        <div class="article-content">
+          <h2>Maintaining Membership</h2>
+
+          <p class="article-intro">
+            GSC members are expected to remain active in meetings, council
+            activities, and council communication. The following circumstances
+            may be grounds for removal from the council.
+          </p>
+
+          <div class="membership-expectations">
+            <article class="expectation-card">
+              <span class="expectation-symbol" aria-hidden="true">02</span>
+
+              <div>
+                <h3>Meeting attendance</h3>
+
+                <p>
+                  Missing two scheduled meetings in one semester without
+                  providing a reasonable excuse, such as a teaching conflict or
+                  medical emergency.
+                </p>
+              </div>
+            </article>
+
+            <article class="expectation-card">
+              <span class="expectation-symbol" aria-hidden="true">@</span>
+
+              <div>
+                <h3>Communication</h3>
+
+                <p>
+                  Failing to respond to email correspondence on two occasions,
+                  including requests such as surveys used to plan meetings.
+                </p>
+              </div>
+            </article>
+
+            <article class="expectation-card">
+              <span class="expectation-symbol" aria-hidden="true">∅</span>
+
+              <div>
+                <h3>Departmental participation</h3>
+
+                <p>
+                  Never or rarely volunteering during a semester for
+                  departmental activities supported by the council.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ARTICLE IV
+         ===================================================== -->
+    <section class="constitution-article constitution-positions" id="positions">
+      <div class="shell constitution-article-grid">
+        <header class="article-label article-label-light">
+          <span>Article 04</span>
+          <p>Leadership</p>
+        </header>
+
+        <div class="article-content article-content-light">
+          <h2>Elected Positions</h2>
+
+          <p class="article-intro">
+            The council has four elected positions with specific
+            responsibilities: two co-chairs, one secretary, and one social
+            media manager.
+          </p>
+
+          <div class="position-stack">
+            <article class="position-card">
+              <div class="position-number">01</div>
+
+              <div class="position-main">
+                <div class="position-heading">
+                  <div>
+                    <p>Two positions</p>
+                    <h3>Co-Chairs</h3>
+                  </div>
+
+                  <span>Full academic-year term</span>
+                </div>
+
+                <p class="position-term">
+                  Co-chairs are elected during the second-to-last meeting of the
+                  semester in alternating semesters. Each co-chair serves for a
+                  full academic year, and the two co-chairs do not begin their
+                  terms in the same semester.
+                </p>
+
+                <ul class="position-duties">
+                  <li>Lead council meetings.</li>
+
+                  <li>
+                    Consolidate information from meetings for presentation to
+                    the administration.
+                  </li>
+
+                  <li>
+                    Communicate administration needs to the rest of the council.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="position-card">
+              <div class="position-number">02</div>
+
+              <div class="position-main">
+                <div class="position-heading">
+                  <div>
+                    <p>One position</p>
+                    <h3>Secretary</h3>
+                  </div>
+
+                  <span>Elected each Spring · One-year term</span>
+                </div>
+
+                <ul class="position-duties">
+                  <li>
+                    Take minutes during meetings and email the minutes to
+                    members after meetings.
+                  </li>
+
+                  <li>
+                    Maintain records of meeting and activity attendance.
+                  </li>
+
+                  <li>
+                    Create and distribute flyers when needed.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="position-card">
+              <div class="position-number">03</div>
+
+              <div class="position-main">
+                <div class="position-heading">
+                  <div>
+                    <p>One position</p>
+                    <h3>Social Media Manager</h3>
+                  </div>
+
+                  <span>Elected each Fall · One-year term</span>
+                </div>
+
+                <ul class="position-duties">
+                  <li>
+                    Maintain the GSC website and social media page with current
+                    member information, updating them monthly together with the
+                    meeting timeline.
+                  </li>
+
+                  <li>
+                    Expand GSC social media when appropriate, for example by
+                    adding videos that answer common graduate school questions.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ARTICLE V
+         ===================================================== -->
+    <section class="constitution-article constitution-voting" id="voting">
+      <div class="shell constitution-article-grid">
+        <header class="article-label">
+          <span>Article 05</span>
+          <p>Election procedure</p>
+        </header>
+
+        <div class="article-content">
+          <h2>Voting for Executive Positions</h2>
+
+          <div class="voting-grid">
+            <article class="voting-card">
+              <span class="voting-count">2+</span>
+
+              <h3>Multiple nominations</h3>
+
+              <p>
+                When two or more nominees are seeking the same position, voting
+                is conducted online. The vote is anonymous to everyone except
+                executive members who are not themselves standing for election.
+              </p>
+            </article>
+
+            <article class="voting-card voting-card-accent">
+              <span class="voting-count">1</span>
+
+              <h3>Single nomination</h3>
+
+              <p>
+                When only one person is nominated for a position, voting is
+                conducted in person.
+              </p>
+
+              <div class="objection-note">
+                <strong>Objection procedure</strong>
+
+                <p>
+                  Anyone wishing to object to the nominated person should send
+                  an email that includes an alternate nominee.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="constitution-endnote">
+            <span aria-hidden="true">§</span>
+
+            <div>
+              <p>Document note</p>
+
+              <strong>
+                This page reflects the council constitution information last
+                updated in August 2024.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="assets/gsc-logo.png" alt="" aria-hidden="true">
+
+        <div>
+          <strong>Graduate Student Council</strong>
+          <span>FSU Mathematics</span>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <p>Navigate</p>
+        <a href="about.html">About us</a>
+        <a href="events.html">Events</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="resources.html">Resources</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+
+      <div class="footer-contact">
+        <p>Department</p>
+        <span>Florida State University</span>
+        <span>Department of Mathematics</span>
+        <span>208 Love Building</span>
+        <span>Tallahassee, FL 32306</span>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <span>
+        © <span id="year"></span> FSU Mathematics Graduate Student Council
+      </span>
+
+      <span>Student-led · Academic · Community</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
