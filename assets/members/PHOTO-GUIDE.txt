@@ -1,0 +1,28 @@
+MEMBER PHOTO REPLACEMENT GUIDE
+
+The About page uses these files:
+
+samadhi.png
+callie.png
+mujtaba.png
+kaylie.png
+rachel.png
+james.png
+daniel.png
+gustav.png
+brayton.png
+toma.png
+reyajul.png
+
+To add a real photo:
+1. Crop the portrait approximately 4:5 vertically.
+2. Export it as PNG.
+3. Give it the exact filename above.
+4. Replace the placeholder file in assets/members/.
+
+You do not need to edit about.html when the filename stays the same.
+
+Recommended export:
+- 1200 x 1500 px
+- PNG or high-quality JPG converted to the required PNG filename
+- Person centered with some room above the head
