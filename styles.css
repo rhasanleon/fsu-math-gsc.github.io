@@ -2195,3 +2195,675 @@ html.theme-transition *::after {
     padding: 74px 0;
   }
 }
+
+/* ============================================================
+   CONSTITUTION PAGE
+   ============================================================ */
+
+.constitution-hero {
+  padding: 105px 0 94px;
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      color-mix(in srgb, var(--gold) 22%, transparent),
+      transparent 27%
+    ),
+    var(--paper);
+}
+
+.constitution-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.55fr);
+  gap: 90px;
+  align-items: end;
+}
+
+.constitution-hero h1 {
+  margin: 0;
+  color: var(--garnet);
+  font-family: var(--serif);
+  font-size: clamp(4.4rem, 9vw, 8.5rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.83;
+}
+
+.constitution-deck {
+  max-width: 760px;
+  margin: 35px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+}
+
+.constitution-status {
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  gap: 18px;
+  padding: 27px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-medium);
+}
+
+.status-dot {
+  width: 11px;
+  height: 11px;
+  margin-top: 5px;
+  background: var(--garnet);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--garnet) 12%, transparent);
+}
+
+.constitution-status p,
+.constitution-status strong,
+.constitution-status span {
+  display: block;
+}
+
+.constitution-status p {
+  margin: 0 0 7px;
+  color: var(--garnet);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.constitution-status strong {
+  margin-bottom: 9px;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+.constitution-status span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.constitution-nav-section {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+}
+
+.constitution-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.constitution-nav a {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  color: var(--muted);
+  border-right: 1px solid var(--line);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.constitution-nav a:first-child {
+  border-left: 1px solid var(--line);
+}
+
+.constitution-nav a span {
+  color: var(--garnet);
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+.constitution-nav a:hover,
+.constitution-nav a:focus-visible {
+  color: var(--garnet);
+  background: var(--surface);
+}
+
+.constitution-article {
+  scroll-margin-top: 70px;
+  padding: 116px 0 126px;
+}
+
+.constitution-article-alt {
+  background: var(--surface);
+}
+
+.constitution-article-grid {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 85px;
+  align-items: start;
+}
+
+.article-label {
+  position: sticky;
+  top: 105px;
+  padding-top: 6px;
+}
+
+.article-label span,
+.article-label p {
+  display: block;
+}
+
+.article-label span {
+  margin-bottom: 10px;
+  color: var(--garnet);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+.article-label p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.article-content {
+  min-width: 0;
+}
+
+.article-content h2 {
+  max-width: 900px;
+  margin: 0 0 28px;
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 5.8vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.94;
+}
+
+.article-intro {
+  max-width: 800px;
+  margin: 0 0 52px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.constitution-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.constitution-list li {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 24px;
+  padding: 27px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.constitution-list p {
+  max-width: 900px;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.list-index {
+  color: var(--garnet);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.eligibility-panel {
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-medium);
+}
+
+.panel-kicker {
+  margin: 0;
+  padding: 22px 26px;
+  color: var(--garnet);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.eligibility-grid article {
+  min-height: 260px;
+  padding: 30px;
+  border-right: 1px solid var(--line);
+}
+
+.eligibility-grid article:last-child {
+  border-right: 0;
+}
+
+.eligibility-grid article > span {
+  display: block;
+  margin-bottom: 68px;
+  color: var(--garnet);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.eligibility-grid h3 {
+  margin: 0 0 13px;
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.eligibility-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.membership-expectations {
+  display: grid;
+  gap: 16px;
+}
+
+.expectation-card {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  padding: 28px 32px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-medium);
+}
+
+.expectation-symbol {
+  width: 74px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  background: var(--garnet);
+  border-radius: 50%;
+  font-family: var(--serif);
+  font-size: 1.65rem;
+}
+
+.expectation-card h3 {
+  margin: 0 0 9px;
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.expectation-card p {
+  max-width: 800px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.constitution-positions {
+  color: #fff;
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(206, 184, 136, 0.14),
+      transparent 26%
+    ),
+    var(--garnet-black);
+}
+
+.article-label-light span {
+  color: var(--gold);
+}
+
+.article-label-light p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.article-content-light h2 {
+  color: #fff;
+}
+
+.article-content-light .article-intro {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.position-stack {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.position-card {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 34px;
+  padding: 38px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.position-number {
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 2.4rem;
+}
+
+.position-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 22px;
+}
+
+.position-heading p {
+  margin: 0 0 6px;
+  color: var(--gold);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.position-heading h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.6vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.position-heading > span {
+  max-width: 230px;
+  padding: 8px 13px;
+  color: var(--gold);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.position-term {
+  max-width: 820px;
+  margin: 0 0 26px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.position-duties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.position-duties li {
+  min-height: 128px;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 12px;
+  font-size: 0.86rem;
+}
+
+.constitution-voting {
+  background: var(--paper);
+}
+
+.voting-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.voting-card {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-medium);
+}
+
+.voting-card-accent {
+  color: #fff;
+  background: var(--garnet);
+  border-color: var(--garnet);
+}
+
+.voting-count {
+  display: block;
+  margin-bottom: auto;
+  color: var(--garnet);
+  font-family: var(--serif);
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.voting-card-accent .voting-count {
+  color: var(--gold);
+}
+
+.voting-card h3 {
+  margin: 45px 0 15px;
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.voting-card > p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.voting-card-accent > p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.objection-note {
+  margin-top: 25px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.objection-note strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.objection-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.86rem;
+}
+
+.constitution-endnote {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  margin-top: 50px;
+  padding: 25px 28px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.constitution-endnote > span {
+  color: var(--garnet);
+  font-family: var(--serif);
+  font-size: 3rem;
+}
+
+.constitution-endnote p {
+  margin: 0 0 5px;
+  color: var(--garnet);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.constitution-endnote strong {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Constitution dark theme refinements */
+
+html[data-theme="dark"] .constitution-status,
+html[data-theme="dark"] .eligibility-panel {
+  background: #1d1518;
+}
+
+html[data-theme="dark"] .constitution-nav-section {
+  background: rgba(23, 17, 19, 0.94);
+}
+
+html[data-theme="dark"] .expectation-card,
+html[data-theme="dark"] .voting-card:not(.voting-card-accent) {
+  background: #21181b;
+}
+
+/* Constitution responsive */
+
+@media (max-width: 1050px) {
+  .constitution-hero-grid {
+    gap: 55px;
+  }
+
+  .constitution-article-grid {
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 50px;
+  }
+
+  .position-duties {
+    grid-template-columns: 1fr;
+  }
+
+  .position-duties li {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .constitution-hero-grid,
+  .constitution-article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .constitution-hero {
+    padding: 78px 0 75px;
+  }
+
+  .constitution-status {
+    max-width: 520px;
+  }
+
+  .constitution-nav-section {
+    position: static;
+  }
+
+  .constitution-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .constitution-nav a {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .article-label {
+    position: static;
+  }
+
+  .constitution-article {
+    padding: 84px 0 94px;
+  }
+
+  .eligibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eligibility-grid article {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eligibility-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  .eligibility-grid article > span {
+    margin-bottom: 38px;
+  }
+
+  .position-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .constitution-hero h1 {
+    font-size: clamp(4rem, 22vw, 6.3rem);
+  }
+
+  .constitution-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .constitution-nav a:first-child {
+    border-left: 0;
+  }
+
+  .constitution-nav a {
+    min-height: 55px;
+    border-right: 0;
+  }
+
+  .constitution-list li {
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .expectation-card {
+    grid-template-columns: 1fr;
+  }
+
+  .position-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .position-heading {
+    flex-direction: column;
+  }
+
+  .voting-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .voting-card {
+    min-height: 360px;
+  }
+
+  .constitution-endnote {
+    grid-template-columns: 46px minmax(0, 1fr);
+  }
+}
